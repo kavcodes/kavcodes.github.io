@@ -1,109 +1,70 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0px;
-    font-size: 1.5vw;
+    font-family: Arial, sans-serif;
 }
 
-p{
-    
-}
-
-#logo {
-    margin: 0px;
-    padding: 8px;
-    font-family: "Fredoka One", sans-serif;
-    
-    text-shadow: 
-    1px 1px 0px black, /* Bottom-right shadow */
-    -1px 1px 0px black, /* Bottom-left shadow */
-  
-    -1px -1px 0px black; /* Top-left shadow */
-}
-
-ul{
-    margin: 0px;
-}
-
-#nav-ul{
+header {
     display: flex;
-}
-
-#nav-ul> li{
-    padding: 8px;
-    margin: 16px;
-}
-
-
-body > header {
-    background-color: orange;  
-    color: white;
-    display: flex;
-    height: 12vh;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-
-
-body > header> nav> ul{
-    list-style: none;
-    text-decoration: none;
-}
-
-form{
-    text-align: center;
-}
-
-h2{
-    text-align: center;
-}
-
-body > main article{
-    width: 60%;
-    margin: auto;
-}
-
-#main-content {
+.header-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-#main-content aside {
-    width: 20%;
+.header-image {
+    height: 100px;
+    width: 100px;
 }
 
-#main-content > div {
-   width: 70%;
+.site-title {
+    text-align: center;
+    flex-grow: 1;
 }
 
-.navbutton{
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
-}
-
-img{
-    border-radius: 50%;
-}
-
-body > footer {
-    background-color: orange;
-    display: flex
-}
-
-#footer-ul{
+nav {
     display: flex;
-    list-style: none;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-#footer-ul > div> li{
-    margin-left: 12px;
-}
-
-#footer-ul > div> li> a{
-    color: white;
+nav a {
+    margin: 0 15px;
     text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
+#welcome-message {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px;
+}
+
+#stories {
+    margin: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #5c85d6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#about-us {
+    padding: 20px;
+    margin-top: 50px;
+}
