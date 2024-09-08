@@ -1,4 +1,8 @@
-let stories = JSON.parse(localStorage.getItem('stories')) || [];
+let stories = JSON.parse(localStorage.getItem('stories')) || [
+    { text: "This is an example story to get started. Each story has exactly five sentences. Upvote stories you like to rank them higher!", upvotes: 0 },
+    { text: "Here’s another 5-sentence story for you. Play around with the upvotes to see how they work. Enjoy the creativity!", upvotes: 0 },
+    { text: "Make sure to submit your own five-sentence story. Use the form below to get started!", upvotes: 0 }
+];
 
 // Function to render the stories sorted by upvotes
 function renderStories() {
@@ -12,8 +16,7 @@ function renderStories() {
 
         storyElement.innerHTML = `
             <p>${story.text}</p>
-            <button class="upvote-btn" data-index="${index}">Upvote (${story.upvotes})</button>
-            <button class="downvote-btn" data-index="${index}">Downvote (${story.downvotes})</button>
+            <button class="upvote-btn" data-index="${index}"><img src="up-arrow.png" class="upvote-icon" /> ${story.upvotes}</button>
         `;
         storiesContainer.appendChild(storyElement);
     });
@@ -25,8 +28,7 @@ document.getElementById('submit-btn').addEventListener('click', () => {
     if (storyText.trim().split(' ').length >= 5) {
         const newStory = {
             text: storyText.trim(),
-            upvotes: 0,
-            downvotes: 0,
+            upvotes: 0
         };
         stories.push(newStory);
         localStorage.setItem('stories', JSON.stringify(stories));
@@ -37,18 +39,13 @@ document.getElementById('submit-btn').addEventListener('click', () => {
     }
 });
 
-// Handle upvotes and downvotes
+// Handle upvotes
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('upvote-btn')) {
-        const index = e.target.getAttribute('data-index');
+    if (e.target.closest('.upvote-btn')) {
+        const index = e.target.closest('.upvote-btn').getAttribute('data-index');
         stories[index].upvotes++;
         localStorage.setItem('stories', JSON.stringify(stories));
         renderStories(); // Re-render stories after upvote
-    } else if (e.target.classList.contains('downvote-btn')) {
-        const index = e.target.getAttribute('data-index');
-        stories[index].downvotes++;
-        localStorage.setItem('stories', JSON.stringify(stories));
-        renderStories(); // Re-render stories after downvote
     }
 });
 
