@@ -30,7 +30,7 @@ header {
 
 .custom-logo {
     font-family: 'Natasya', cursive; /* Example logo-like font */
-    font-size: 3em;
+    font-size: 70%;
     color: #333;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
