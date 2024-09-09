@@ -16,8 +16,7 @@ body {
 }
 
 .logo {
-    width: 20%;
-    max-width: 220px; /* Prevent it from getting too large */
+    width: 52.083vw
     height: auto;
 }
 
