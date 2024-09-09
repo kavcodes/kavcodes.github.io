@@ -39,7 +39,7 @@ body {
 /* Further adjust the logo size for phones */
 @media (max-width: 480px) {
     .logo {
-        width: 120vw; /* Full width for phones */
+        width: 150vw; /* Full width for phones */
     }
 }
 
