@@ -15,9 +15,29 @@ body {
     height: auto;
 }
 
+/* Base style for the logo */
 .logo {
-    width: 52.083vw
-    height: auto;
+    width: 52.083vw; /* 52.083vw is the equivalent of 1000px on a 1920px wide screen */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Adjust the logo size for tablets and smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        width: 80vw; /* Increase width for smaller screens like tablets */
+    }
+}
+
+/* Further adjust the logo size for phones */
+@media (max-width: 480px) {
+    .logo {
+        width: 100vw; /* Full width for phones */
+    }
+}
+
+/* Ensure the logo doesn't exceed its container */
+.logo {
+    max-width: 100%;
 }
 
 header {
