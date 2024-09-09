@@ -15,6 +15,14 @@ body {
     height: auto;
 }
 
+/* Adjust sizes for phones (480px or smaller) */
+@media (max-width: 480px) {
+    
+    .icon-image {
+        width: 150px; /* Increase size for the icon on phones */
+    }
+}
+
 /* Base style for the logo */
 .logo {
     width: 52.083vw; /* 52.083vw is the equivalent of 1000px on a 1920px wide screen */
