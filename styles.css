@@ -19,7 +19,7 @@ body {
 @media (max-width: 480px) {
     
     .icon-image {
-        width: 150px; /* Increase size for the icon on phones */
+        width: 30px; /* Increase size for the icon on phones */
     }
 }
 
