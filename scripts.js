@@ -1,5 +1,5 @@
 let stories = JSON.parse(localStorage.getItem('stories')) || [
-      { text: "This is an example story to get started. higher!", upvotes: 0 },
+      { text: "This is an example story to get started, each story has exactly five sentences. Upvote stories you like to rank them higher! Try upvoting one of the stories below this to see what happens! Make sure to submit your own five-sentence story. Use the form below to get started!", upvotes: 0 },
     { text: "Here’s another 5-sentence story for you. Play around with the upvotes to see how they work. Enjoy the creativity!", upvotes: 0 },
     { text: "Make sure to submit your own five-sentence story. Use the form below to get started!", upvotes: 0 }
 ];
