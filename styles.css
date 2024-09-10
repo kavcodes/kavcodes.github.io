@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     /* Grainy light blue background */
-    background-color: #2193b0 → #6dd5ed; /* Light blue background */
+     background-image: linear-gradient(to right, #2193b0, #6dd5ed) /* Light blue background */
 }
 
 /* Styles for the logo icon */
